@@ -10,12 +10,23 @@
 * Посчитать и вывести средний балл по каждому классу.
 """
 
+import random
+
+
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+    school_scores_sum = 0
+    school_scores_count = 0
+    for scholl_class in school:
+        class_scores_sum = sum(scholl_class["scores"])
+        class_scores_count = len(scholl_class["scores"])
+        print(class_scores_sum/class_scores_count)
+        school_scores_sum += class_scores_sum
+        school_scores_count += class_scores_count
+    print(school_scores_sum/school_scores_count)
+
+
 if __name__ == "__main__":
+    school = [{"school_class": f"{x}a",  "scores": [random.randint(
+        2, 5) for y in range(random.randint(5, 15))]} for x in range(1, 12)]
+    print(school)
     main()
