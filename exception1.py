@@ -16,7 +16,7 @@ def ask_user():
         try:
             question = input("Пользователь: ")
         except KeyboardInterrupt:
-            print("Пока!")
+            print("\nПрограмма: Пока!")
             break
         if question in questions_dict.keys():
             print(f"Программа: {questions_dict[question]}")
@@ -25,7 +25,7 @@ def ask_user():
      
 if __name__ == "__main__":
     questions_dict = {
-         "Как дела": "Хорошо!", 
+         "Как дела?": "Хорошо!", 
          "Что делаешь?": "Программирую",
          "Чем увлекаешься?": "Программированием",
          "Какая погода?": "Отличная"
