@@ -17,18 +17,18 @@
 
 
 def ask_user():
-     while True:
-          question = input("Пользователь: ")
-          if question in questions_dict.keys():
-              print(f"Программа: {questions_dict[question]}")
-          else:
-               print(f"Программа: Нет ответа")
-     
+    while True:
+        question = input("Пользователь: ")
+        answer = questions_dict.get(question, "Нет ответа")
+        print(f"Программа: {answer}")
+
+
 if __name__ == "__main__":
     questions_dict = {
-         "Как дела": "Хорошо!", 
-         "Что делаешь?": "Программирую",
-         "Чем увлекаешься?": "Программированием",
-         "Какая погода?": "Отличная"
-         }
+        "Как дела": "Хорошо!",
+        "Что делаешь?": "Программирую",
+        "Чем увлекаешься?": "Программированием",
+        "Какая погода?": "Отличная",
+    }
     ask_user()
+

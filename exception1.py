@@ -18,10 +18,8 @@ def ask_user():
         except KeyboardInterrupt:
             print("\nПрограмма: Пока!")
             break
-        if question in questions_dict.keys():
-            print(f"Программа: {questions_dict[question]}")
-        else:
-            print(f"Программа: Нет ответа")
+        answer = questions_dict.get(question, "Нет ответа")
+        print(f"Программа: {answer}")
      
 if __name__ == "__main__":
     questions_dict = {
