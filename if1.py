@@ -15,12 +15,12 @@
 """
 
 
-def main(age23):
-    if age in [x for x in range(3, 7)]:
+def main(age):
+    if age in list(range(3, 7)):
         return "детский сад"
-    if age in [x for x in range(7, 19)]:
+    if age in list(range(7, 19)):
         return "школа"
-    if age in [x for x in range(19, 26)]:
+    if age in list(range(19, 26)):
         return "вуз"
     if age > 25:
         return "работа"
@@ -28,4 +28,5 @@ def main(age23):
 
 if __name__ == "__main__":
     age = int(input())
-    print(main(age))
+    result = main(age) 
+    print(result)
